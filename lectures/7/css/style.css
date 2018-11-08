@@ -1,6 +1,14 @@
 #main {
-    /* add CSS here */
-}
+	margin: auto;
+
+ }
 .pet {
-    /* add CSS here */
+    border: dashed red;
+    max-width: 260px;
+    max-height: : 300px;
+    margin: auto;
+    cursor: pointer;
+    -webkit-box-shadow: -2px 7px 32px -1px rgba(0,0,0,0.75);
+-moz-box-shadow: -2px 7px 32px -1px rgba(0,0,0,0.75);
+box-shadow: -2px 7px 32px -1px rgba(0,0,0,0.75);
 }
