@@ -36,7 +36,15 @@ input[type=radio]{
     color: white;
     font-weight: bold;
 }
-
+#tryagain-btn {
+    text-align: center;
+    background-color: #805724;
+    width: 150px;
+    height: 60px;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+}
 #question {
     text-align: center;
     font-size: 2em;
