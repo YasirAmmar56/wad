@@ -11,7 +11,10 @@
 <div>
     <div class="AccountDetails">
         <div class="sav-acct-info">
-            <div class="acct-head">Account Title:</div>
+            
+            <div class="acct-head">Account Title:
+            <div id="question"></div>
+            </div>
             <div class="acct-desc">
                 <span id="title"></span>
             </div>
@@ -40,7 +43,7 @@
 <div class="sav-acct-info acct-lft">
     <div class="acct-head">Deposit</div>
     <div class="acct-desc">
-        <input id="deposit" placeholder="Deposit Amount">
+        <input id="deposit" placeholder="Deposit Amount" onkeyup="Deposite(event,this.input)">
         <p id="deposit-msg"></p>
     </div>
 </div>
