@@ -16,10 +16,12 @@ if(isset($_GET['edit_pro'])){
     $pro_image = $row_pro['pro_image'];
     $pro_desc = $row_pro['pro_desc'];
     $pro_keywords = $row_pro['pro_keywords'];
+
     $get_cat = "select * from categories where cat_id = '$pro_cat'";
     $run_cat = mysqli_query($con,$get_cat);
     $row_cat = mysqli_fetch_array($run_cat);
     $cat_title = $row_cat['cat_title'];
+
     $get_brand = "select * from brands where brand_id = '$pro_brand'";
     $run_brand = mysqli_query($con,$get_brand);
     $row_brand = mysqli_fetch_array($run_brand);
@@ -36,7 +38,9 @@ if(isset($_POST['update_pro'])){
     //getting image from the field
     $pro_image = $_FILES['pro_image']['name'];
     $pro_image_tmp = $_FILES['pro_image']['tmp_name'];
+
     move_uploaded_file($pro_image_tmp,"product_images/$pro_image");
+
     $update_product = "update products set pro_cat = '$pro_cat', 
                                         pro_brand = '$pro_brand',
                                         pro_title = '$pro_title' ,
@@ -45,6 +49,7 @@ if(isset($_POST['update_pro'])){
                                         pro_image = '$pro_image', 
                                         pro_keywords = '$pro_keywords' 
                                         where pro_id='$pro_id'";
+
     $update_pro = mysqli_query($con, $update_product);
     if($update_pro){
         header("location: index.php?view_products");
